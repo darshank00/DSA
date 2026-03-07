@@ -1,0 +1,16 @@
+class Solution(object):
+    def recoverOrder(self, order, friends):
+        """
+        :type order: List[int]
+        :type friends: List[int]
+        :rtype: List[int]
+        """
+        arr=[]
+        for i in range(len(order)):
+            for j in range(len(friends)):
+               if friends[j]==order[i]:
+                arr.append(friends[j]) 
+               
+            
+
+        return arr
