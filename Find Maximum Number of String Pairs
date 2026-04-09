@@ -1,0 +1,19 @@
+class Solution(object):
+    def maximumNumberOfStringPairs(self, words):
+        """
+        :type words: List[str]
+        :rtype: int
+        """
+        seen = set()
+        count = 0
+
+        for word in words:
+            rev = word[::-1]   # reverse the word
+        
+            if rev in seen:
+                count += 1
+                seen.remove(rev)  # remove since it's now used
+            else:
+                seen.add(word)
+
+        return count
