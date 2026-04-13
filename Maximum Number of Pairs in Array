@@ -1,0 +1,18 @@
+class Solution(object):
+    def numberOfPairs(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        from collections import Counter
+    
+        count = Counter(nums)
+    
+        pairs = 0
+        leftover = 0
+    
+        for val in count.values():
+            pairs += val // 2
+            leftover += val % 2
+    
+        return [pairs, leftover]
