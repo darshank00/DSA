@@ -1,0 +1,13 @@
+class Solution(object):
+    def maximizeExpressionOfThree(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums_sorted = sorted(nums)
+    
+        min_val = nums_sorted[0]
+        max1 = nums_sorted[-1]
+        max2 = nums_sorted[-2]
+    
+        return max1 + max2 - min_val
