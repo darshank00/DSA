@@ -1,0 +1,21 @@
+
+
+class Solution(object):
+    def canAliceWin(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        single = 0
+        double = 0
+
+        for num in nums:
+            if num < 10:
+                single += num
+            else:
+                double += num
+
+        total = single + double
+
+        
+        return single > total - single or double > total - double
